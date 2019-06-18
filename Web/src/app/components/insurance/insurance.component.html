@@ -1,0 +1,17 @@
+<p>
+  Insurance
+</p>
+<select [(ngModel)]="selectedPolicy" (change)="onChange($event.target.value)">
+  <option *ngFor="let p of policy" [value]="p.id">{{p.name}}</option>
+</select>
+<div *ngIf="policyDetails !=null && policyDetails.riskTypes">
+    <p>Risk Types</p>
+<div *ngFor="let riskType of policyDetails.riskTypes">
+  <h4>{{riskType.name}}</h4>
+  <div *ngFor="let riskFactor of riskType.riskFactors">
+      <label>{{riskFactor.name}}</label>
+      <app-textbox *ngIf="riskFactor.type==1"></app-textbox>
+      <app-radio-buttons id="1" *ngIf="riskFactor.type==2" name="riskFactor.name"></app-radio-buttons>
+  </div>
+</div>
+</div>

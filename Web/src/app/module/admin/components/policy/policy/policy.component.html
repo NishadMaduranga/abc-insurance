@@ -1,0 +1,11 @@
+<label>Name</label>
+<input type="text" [(ngModel)]="policy.name">
+<p>Risk Types</p>
+
+<label *ngFor="let riskType of riskTypes; let i = index">
+    <input type="checkbox" id="i" [(ngModel)]="riskType.selected" name="riskType">
+    {{riskType.name}}
+  </label>
+
+  <button (click)="save()">Save</button>
+  <button (click)="cancel()">Cancel</button>

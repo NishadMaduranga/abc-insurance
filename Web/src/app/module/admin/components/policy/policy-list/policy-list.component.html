@@ -1,0 +1,32 @@
+<p>
+    policy List 
+    <button (click)="addNewPolicy()">Add</button>
+  </p>
+  <div class="dashboard-grid" *ngIf="policyList != null && policyList.length > 0">
+      <div class="responsive-table">
+        <table class="table">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Description</th>                                            
+                  <th>Risk Category</th>
+                </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let policy of policyList">
+                <td>{{policy.name}}</td>
+                <td>{{policy.description}}</td>                             
+                <td>
+                    <label *ngFor="let riskType of policy.riskTypes; let i = index">
+                        <input type="checkbox" checked="true" disabled>
+                        {{riskType.name}}
+                      </label>
+                </td>            
+            </tr>
+          </tbody>
+        </table>
+      </div>   
+    </div>
+    <div>
+      <app-policy></app-policy>
+    </div>
