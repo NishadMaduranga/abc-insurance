@@ -5,6 +5,7 @@ namespace InsuranceCoLtdService.Context.Migrations
 {
     public partial class CreateDB : Migration
     {
+        //Added a comment
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(

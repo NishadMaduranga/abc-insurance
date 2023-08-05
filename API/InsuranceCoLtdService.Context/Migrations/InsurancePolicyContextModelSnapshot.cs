@@ -10,6 +10,7 @@ namespace InsuranceCoLtdService.Context.Migrations
     [DbContext(typeof(InsurancePolicyContext))]
     partial class InsurancePolicyContextModelSnapshot : ModelSnapshot
     {
+        //Addeing another comment
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
